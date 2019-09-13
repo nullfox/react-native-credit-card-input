@@ -166,9 +166,11 @@ export default class CreditCardInput extends Component {
           expiry={expiry}
           cvc={cvc} />
         <ScrollView ref="Form"
+          directionalLockEnabled={true}
           keyboardShouldPersistTaps="always"
           scrollEnabled={allowScroll}
           showsHorizontalScrollIndicator={false}
+          automaticallyAdjustContentInsets={false}
           style={s.form}>
             <View style={{ flexDirection: 'row' }}>
           {requiresName &&
