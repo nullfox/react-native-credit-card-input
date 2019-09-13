@@ -11,7 +11,7 @@ import ReactNative, {
   TextInput,
 } from "react-native";
 
-import CreditCard from "./CardView";
+import CreditCard from "./CardView/CardView";
 import CCInput from "./CCInput";
 import { InjectedProps } from "./connectToState";
 
@@ -74,18 +74,18 @@ export default class CreditCardInput extends Component {
   static defaultProps = {
     cardViewSize: {},
     labels: {
-      name: "NOME",
-      number: "NÚMERO DO CARTÃO",
-      expiry: "EXPIRA EM",
+      name: "NAME",
+      number: "CARD NUMBER",
+      expiry: "EXPIRATION DATE",
       cvc: "CVC/CCV",
       postalCode: "POSTAL CODE",
     },
     placeholders: {
-      name: "Nome completo",
+      name: "Full name",
       number: "1234 5678 1234 5678",
       expiry: "MM/YY",
       cvc: "CVC",
-      postalCode: "34567",
+      postalCode: "12345",
     },
     inputContainerStyle: {
       borderBottomWidth: 1,
