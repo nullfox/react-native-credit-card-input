@@ -76,7 +76,7 @@ export default class CreditCardInput extends Component {
     labels: {
       name: "NAME",
       number: "CARD NUMBER",
-      expiry: "EXPIRATION DATE",
+      expiry: "EXP DATE",
       cvc: "CVC/CCV",
       postalCode: "POSTAL CODE",
     },
@@ -170,6 +170,7 @@ export default class CreditCardInput extends Component {
           scrollEnabled={allowScroll}
           showsHorizontalScrollIndicator={false}
           style={s.form}>
+            <View style={{ flexDirection: 'row' }}>
           {requiresName &&
             <CCInput {...this._inputProps("name")}
 
@@ -188,6 +189,7 @@ export default class CreditCardInput extends Component {
             <CCInput {...this._inputProps("postalCode")}
               keyboardType="numeric"
               containerStyle={[s.inputContainer, inputContainerStyle, { width: POSTAL_CODE_INPUT_WIDTH }]} />}
+            </View>
         </ScrollView>
       </View>
     );
