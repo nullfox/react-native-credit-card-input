@@ -175,20 +175,34 @@ export default class CreditCardInput extends Component {
             <View style={{ flexDirection: 'row' }}>
           {requiresName &&
             <CCInput {...this._inputProps("name")}
-
+              additionalInputProps={{
+                testID: 'ccinput-name',
+              }}
               containerStyle={[s.inputContainer, inputContainerStyle, { width: NAME_INPUT_WIDTH }]} />}
           <CCInput {...this._inputProps("number")}
+            additionalInputProps={{
+              testID: 'ccinput-number',
+            }}
             keyboardType="numeric"
             containerStyle={[s.inputContainer, inputContainerStyle, { width: CARD_NUMBER_INPUT_WIDTH }]} />
           <CCInput {...this._inputProps("expiry")}
+            additionalInputProps={{
+              testID: 'ccinput-expiry',
+            }}
             keyboardType="numeric"
             containerStyle={[s.inputContainer, inputContainerStyle, { width: EXPIRY_INPUT_WIDTH }]} />
           {requiresCVC &&
             <CCInput {...this._inputProps("cvc")}
+            additionalInputProps={{
+              testID: 'ccinput-cvc',
+            }}
               keyboardType="numeric"
               containerStyle={[s.inputContainer, inputContainerStyle, { width: CVC_INPUT_WIDTH }]} />}
           {requiresPostalCode &&
             <CCInput {...this._inputProps("postalCode")}
+            additionalInputProps={{
+              testID: 'ccinput-postalCode',
+            }}
               keyboardType="numeric"
               containerStyle={[s.inputContainer, inputContainerStyle, { width: POSTAL_CODE_INPUT_WIDTH }]} />}
             </View>
